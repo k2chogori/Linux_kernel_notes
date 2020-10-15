@@ -76,4 +76,5 @@
 * Interrupt handler starts execution in kernel with predefined entry point
 * For each interrupt handler processor jumps to unique location in memory and executes code located there. Hence kernel knows the IRQ number of incoming interrupt
 * Upon the interrupt entry point, current register values of interrupted task are stored on the stack. Then kernel calls do_IRQ()
-* /proc is procfs virtual filesystem which exists 
+* /proc is procfs virtual filesystem which exists in kernerl memory and shows {interrupt line, number of interrupts since boot, interrupt controller handling the interrupt, device associated with interrupt (who causes the interrupt)
+  * Bottom half job is to the interrupt-related work which was not done by top half
